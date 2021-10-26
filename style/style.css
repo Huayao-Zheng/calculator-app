@@ -7,6 +7,9 @@
 :root {
   --main-background: hsl(222, 26%, 31%);
   --text: hsl(0, 0%, 100%);
+  --toggle-and-keypad-bg: hsl(223, 31%, 20%);
+  --key-bg-and-toggle: hsl(6, 63%, 50%);
+  --screen-bg: hsl(224, 36%, 15%);
 }
 
 body {
@@ -56,5 +59,38 @@ main header .theme__text {
   text-transform: uppercase;
   color: var(--text);
   margin-right: 21px;
+}
+
+main header .theme__numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main header .theme__numbers span {
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--text);
+}
+
+main header .theme__switcher__dot {
+  position: relative;
+  background-color: var(--toggle-and-keypad-bg);
+  width: 71px;
+  height: 26px;
+  border-radius: 13px;
+}
+
+main header .theme__switcher__dot::before {
+  content: '';
+  height: 16px;
+  width: 16px;
+  background: var(--key-bg-and-toggle);
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  border-radius: 50%;
 }
 /*# sourceMappingURL=style.css.map */
