@@ -5,16 +5,23 @@
 }
 
 :root {
-  --main-background: hsl(222, 26%, 31%);
-  --text: hsl(0, 0%, 100%);
-  --toggle-and-keypad-bg: hsl(223, 31%, 20%);
-  --key-bg-and-toggle: hsl(6, 63%, 50%);
-  --screen-bg: hsl(224, 36%, 15%);
+  --main-background: #3a4764;
+  --text: #fff;
+  --keypad-text: #444b5a;
+  --toggle-and-keypad-bg: #232c43;
+  --keypad-and-toggle-bg: #d03f2f;
+  --screen-bg: #182034;
+  --keypad-bg: #eae3dc;
+  --keypad-bg-shadow: #b3a497;
+  --del-reset-keypad-bg: #637097;
+  --del-reset-keypadbg-shadow: #404e72;
+  --equal: #fff;
+  --equal-bg-shdow: #93261a;
 }
 
 body {
   background: var(--main-background);
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   margin: 0;
   color: var(--text);
@@ -34,6 +41,7 @@ main header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 32px;
 }
 
 main header .title {
@@ -55,6 +63,7 @@ main header .theme {
 main header .theme__text {
   font-size: 12px;
   font-weight: bold;
+  line-height: 13px;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--text);
@@ -67,12 +76,14 @@ main header .theme__numbers {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin-bottom: 5px;
 }
 
 main header .theme__numbers span {
   font-size: 12px;
   font-weight: bold;
   color: var(--text);
+  line-height: 13px;
 }
 
 main header .theme__switcher__dot {
@@ -83,14 +94,191 @@ main header .theme__switcher__dot {
   border-radius: 13px;
 }
 
-main header .theme__switcher__dot::before {
-  content: '';
+main header .theme__switcher__dot .dot {
   height: 16px;
   width: 16px;
-  background: var(--key-bg-and-toggle);
+  background: var(--keypad-and-toggle-bg);
+  border-radius: 50%;
   position: absolute;
   top: 5px;
   left: 5px;
-  border-radius: 50%;
+}
+
+main .display {
+  background: var(--screen-bg);
+  max-width: 540px;
+  height: 128px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 38px 32px 36px 32px;
+  margin-bottom: 24px;
+}
+
+main .display__calculation {
+  font-size: 48px;
+  line-height: 54px;
+  letter-spacing: -0.08px;
+  color: var(--text);
+}
+
+main .keyboard {
+  background: var(--toggle-and-keypad-bg);
+  padding: 32px 31px;
+  border-radius: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (64px)[5];
+  -ms-grid-columns: (101px)[4];
+      grid-template: repeat(5, 64px)/repeat(4, 101px);
+  grid-gap: 24px 25px;
+      grid-template-areas: '__7 __8 __9 __del' '__4 __5 __6 __plus' '__1 __2 __3 __minus' '__dot __0 __divide __time' '__reset __reset __equal __equal';
+}
+
+main .keyboard__7 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: __7;
+}
+
+main .keyboard__8 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: __8;
+}
+
+main .keyboard__9 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: __9;
+}
+
+main .keyboard__del {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: __del;
+}
+
+main .keyboard__4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: __4;
+}
+
+main .keyboard__5 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: __5;
+}
+
+main .keyboard__6 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: __6;
+}
+
+main .keyboard__plus {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: __plus;
+}
+
+main .keyboard__1 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: __1;
+}
+
+main .keyboard__2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: __2;
+}
+
+main .keyboard__3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: __3;
+}
+
+main .keyboard__minus {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  grid-area: __minus;
+}
+
+main .keyboard__dot {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: __dot;
+}
+
+main .keyboard__0 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: __0;
+}
+
+main .keyboard__divide {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: __divide;
+}
+
+main .keyboard__time {
+  -ms-grid-row: 4;
+  -ms-grid-column: 4;
+  grid-area: __time;
+}
+
+main .keyboard__reset {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: __reset;
+}
+
+main .keyboard__equal {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: __equal;
+}
+
+main .keyboard__keypad {
+  border-radius: 10px;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -0.533333px;
+  color: var(--keypad-text);
+  background: var(--keypad-bg);
+  -webkit-box-shadow: inset 0px -4px 0px var(--keypad-bg-shadow);
+          box-shadow: inset 0px -4px 0px var(--keypad-bg-shadow);
+  border: none;
+}
+
+main .keyboard__del, main .keyboard__reset, main .keyboard__equal {
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: -0.333333px;
+  color: #fff;
+  background: var(--del-reset-keypad-bg);
+  -webkit-box-shadow: inset 0px -4px 0px var(--del-reset-keypadbg-shadow);
+          box-shadow: inset 0px -4px 0px var(--del-reset-keypadbg-shadow);
+  text-transform: uppercase;
+}
+
+main .keyboard__equal {
+  color: var(--equal);
+  background: var(--keypad-and-toggle-bg);
+  -webkit-box-shadow: inset 0px -4px 0px var(--equal-bg-shdow);
+          box-shadow: inset 0px -4px 0px var(--equal-bg-shdow);
 }
 /*# sourceMappingURL=style.css.map */
