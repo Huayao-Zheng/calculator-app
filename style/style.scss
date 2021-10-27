@@ -6,16 +6,24 @@
 :root {
   --main-background: #3a4764;
   --text: #fff;
-  --keypad-text: #444b5a;
   --toggle-and-keypad-bg: #232c43;
-  --keypad-and-toggle-bg: #d03f2f;
+  //screen
   --screen-bg: #182034;
-  --keypad-bg: #eae3dc;
-  --keypad-bg-shadow: #b3a497;
-  --del-reset-keypad-bg: #637097;
-  --del-reset-keypadbg-shadow: #404e72;
+  //toggle and equal color
+  --keypad-and-toggle-bg: #d03f2f;
+  --keypad-and-toggle-hover-bg: #f96b5b;
+  //equal keypad color
   --equal: #fff;
   --equal-bg-shdow: #93261a;
+  //reset and del kaypad color
+  --del-reset-keypad-bg: #637097;
+  --del-reset-keypad-hover-bg: #a2b2e1;
+  --del-reset-keypadbg-shadow: #404e72;
+  //general keypads color
+  --keypad-text: #444b5a;
+  --keypad-bg: #eae3dc;
+  --keypad-hover-bg: #fffffe;
+  --keypad-bg-shadow: #b3a497;
 }
 
 .theme2 {
@@ -90,6 +98,12 @@ main {
           position: absolute;
           top: 5px;
           left: 5px;
+          cursor: pointer;
+          transition: 0.3s;
+          &:hover {
+            background: var(--keypad-and-toggle-hover-bg);
+            transform: scale(1.1);
+          }
         }
       }
     }
@@ -192,11 +206,15 @@ main {
       background: var(--keypad-bg);
       box-shadow: inset 0px -4px 0px var(--keypad-bg-shadow);
       border: none;
+      transition: 0.3s;
+      cursor: pointer;
+      &:hover {
+        background: var(--keypad-hover-bg);
+      }
     }
 
     &__del,
-    &__reset,
-    &__equal {
+    &__reset {
       font-size: 20px;
       line-height: 22px;
       letter-spacing: -0.333333px;
@@ -204,12 +222,22 @@ main {
       background: var(--del-reset-keypad-bg);
       box-shadow: inset 0px -4px 0px var(--del-reset-keypadbg-shadow);
       text-transform: uppercase;
+      &:hover {
+        background: var(--del-reset-keypad-hover-bg);
+      }
     }
 
     &__equal {
+      font-size: 20px;
+      line-height: 22px;
+      letter-spacing: -0.333333px;
       color: var(--equal);
       background: var(--keypad-and-toggle-bg);
       box-shadow: inset 0px -4px 0px var(--equal-bg-shdow);
+      &:hover {
+        background: var(--keypad-and-toggle-hover-bg);
+        color: var(--equal);
+      }
     }
   }
 }

@@ -7,16 +7,19 @@
 :root {
   --main-background: #3a4764;
   --text: #fff;
-  --keypad-text: #444b5a;
   --toggle-and-keypad-bg: #232c43;
-  --keypad-and-toggle-bg: #d03f2f;
   --screen-bg: #182034;
-  --keypad-bg: #eae3dc;
-  --keypad-bg-shadow: #b3a497;
-  --del-reset-keypad-bg: #637097;
-  --del-reset-keypadbg-shadow: #404e72;
+  --keypad-and-toggle-bg: #d03f2f;
+  --keypad-and-toggle-hover-bg: #f96b5b;
   --equal: #fff;
   --equal-bg-shdow: #93261a;
+  --del-reset-keypad-bg: #637097;
+  --del-reset-keypad-hover-bg: #a2b2e1;
+  --del-reset-keypadbg-shadow: #404e72;
+  --keypad-text: #444b5a;
+  --keypad-bg: #eae3dc;
+  --keypad-hover-bg: #fffffe;
+  --keypad-bg-shadow: #b3a497;
 }
 
 body {
@@ -102,6 +105,15 @@ main header .theme__switcher__dot .dot {
   position: absolute;
   top: 5px;
   left: 5px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+main header .theme__switcher__dot .dot:hover {
+  background: var(--keypad-and-toggle-hover-bg);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 main .display {
@@ -262,9 +274,16 @@ main .keyboard__keypad {
   -webkit-box-shadow: inset 0px -4px 0px var(--keypad-bg-shadow);
           box-shadow: inset 0px -4px 0px var(--keypad-bg-shadow);
   border: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
-main .keyboard__del, main .keyboard__reset, main .keyboard__equal {
+main .keyboard__keypad:hover {
+  background: var(--keypad-hover-bg);
+}
+
+main .keyboard__del, main .keyboard__reset {
   font-size: 20px;
   line-height: 22px;
   letter-spacing: -0.333333px;
@@ -275,10 +294,22 @@ main .keyboard__del, main .keyboard__reset, main .keyboard__equal {
   text-transform: uppercase;
 }
 
+main .keyboard__del:hover, main .keyboard__reset:hover {
+  background: var(--del-reset-keypad-hover-bg);
+}
+
 main .keyboard__equal {
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: -0.333333px;
   color: var(--equal);
   background: var(--keypad-and-toggle-bg);
   -webkit-box-shadow: inset 0px -4px 0px var(--equal-bg-shdow);
           box-shadow: inset 0px -4px 0px var(--equal-bg-shdow);
+}
+
+main .keyboard__equal:hover {
+  background: var(--keypad-and-toggle-hover-bg);
+  color: var(--equal);
 }
 /*# sourceMappingURL=style.css.map */
