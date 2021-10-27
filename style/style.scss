@@ -3,6 +3,22 @@
   font-family: 'Spartan', sans-serif;
 }
 
+@mixin dotStyle {
+  height: 16px;
+  width: 16px;
+  background: var(--keypad-and-toggle-bg);
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    background: var(--keypad-and-toggle-hover-bg);
+    transform: scale(1.1);
+  }
+}
+
 .theme1 {
   --main-background: #3a4764;
   --text: #fff;
@@ -24,6 +40,9 @@
   --keypad-bg: #eae3dc;
   --keypad-hover-bg: #fffffe;
   --keypad-bg-shadow: #b3a497;
+  .dot {
+    @include dotStyle;
+  }
 }
 
 .theme2 {
@@ -42,6 +61,10 @@
   --keypad-bg: #e5e4e1;
   --keypad-hover-bg: #fff;
   --keypad-bg-shadow: #a79e91;
+  .dot {
+    @include dotStyle;
+    left: 25.66px;
+  }
 }
 .theme3 {
   --main-background: #17062a;
@@ -59,6 +82,10 @@
   --keypad-bg: #331c4d;
   --keypad-hover-bg: #6c34ac;
   --keypad-bg-shadow: #6c34ac;
+  .dot {
+    @include dotStyle;
+    left: 51.32px;
+  }
 }
 
 body {
@@ -119,22 +146,6 @@ main {
         width: 71px;
         height: 26px;
         border-radius: 13px;
-
-        .dot {
-          height: 16px;
-          width: 16px;
-          background: var(--keypad-and-toggle-bg);
-          border-radius: 50%;
-          position: absolute;
-          top: 5px;
-          left: 5px;
-          cursor: pointer;
-          transition: 0.3s;
-          &:hover {
-            background: var(--keypad-and-toggle-hover-bg);
-            transform: scale(1.1);
-          }
-        }
       }
     }
   }

@@ -22,6 +22,25 @@
   --keypad-bg-shadow: #b3a497;
 }
 
+.theme1 .dot {
+  height: 16px;
+  width: 16px;
+  background: var(--keypad-and-toggle-bg);
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.theme1 .dot:hover {
+  background: var(--keypad-and-toggle-hover-bg);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .theme2 {
   --main-background: #e6e6e6;
   --text: #36362c;
@@ -40,6 +59,26 @@
   --keypad-bg-shadow: #a79e91;
 }
 
+.theme2 .dot {
+  height: 16px;
+  width: 16px;
+  background: var(--keypad-and-toggle-bg);
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  left: 25.66px;
+}
+
+.theme2 .dot:hover {
+  background: var(--keypad-and-toggle-hover-bg);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .theme3 {
   --main-background: #17062a;
   --text: #ffe53d;
@@ -56,6 +95,26 @@
   --keypad-bg: #331c4d;
   --keypad-hover-bg: #6c34ac;
   --keypad-bg-shadow: #6c34ac;
+}
+
+.theme3 .dot {
+  height: 16px;
+  width: 16px;
+  background: var(--keypad-and-toggle-bg);
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  left: 51.32px;
+}
+
+.theme3 .dot:hover {
+  background: var(--keypad-and-toggle-hover-bg);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 body {
@@ -131,25 +190,6 @@ main header .theme__switcher__dot {
   width: 71px;
   height: 26px;
   border-radius: 13px;
-}
-
-main header .theme__switcher__dot .dot {
-  height: 16px;
-  width: 16px;
-  background: var(--keypad-and-toggle-bg);
-  border-radius: 50%;
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  cursor: pointer;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-main header .theme__switcher__dot .dot:hover {
-  background: var(--keypad-and-toggle-hover-bg);
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
 main .display {
