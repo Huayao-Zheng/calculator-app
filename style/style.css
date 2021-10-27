@@ -16,10 +16,46 @@
   --del-reset-keypad-bg: #637097;
   --del-reset-keypad-hover-bg: #a2b2e1;
   --del-reset-keypadbg-shadow: #404e72;
-  --keypad-text: #444b5a;
+  --keypad-text: #434a59;
   --keypad-bg: #eae3dc;
   --keypad-hover-bg: #fffffe;
   --keypad-bg-shadow: #b3a497;
+}
+
+.theme2 {
+  --main-background: #e6e6e6;
+  --text: #36362c;
+  --toggle-and-keypad-bg: #d2cdcd;
+  --screen-bg: #eeeeee;
+  --keypad-and-toggle-bg: #c85402;
+  --keypad-and-toggle-hover-bg: #ff8a38;
+  --equal: #fff;
+  --equal-bg-shdow: #873901;
+  --del-reset-keypad-bg: #378187;
+  --del-reset-keypad-hover-bg: #62b5bc;
+  --del-reset-keypadbg-shadow: #1b6066;
+  --keypad-text: #36362c;
+  --keypad-bg: #e5e4e1;
+  --keypad-hover-bg: #fff;
+  --keypad-bg-shadow: #a79e91;
+}
+
+.theme3 {
+  --main-background: #17062a;
+  --text: #ffe53d;
+  --toggle-and-keypad-bg: #1e0936;
+  --screen-bg: #1e0936;
+  --keypad-and-toggle-bg: #00ded0;
+  --keypad-and-toggle-hover-bg: #93fff8;
+  --equal: #1a2327;
+  --equal-bg-shdow: #6cf9f1;
+  --del-reset-keypad-bg: #56077c;
+  --del-reset-keypad-hover-bg: #8631af;
+  --del-reset-keypadbg-shadow: #be15f4;
+  --keypad-text: #ffe53d;
+  --keypad-bg: #331c4d;
+  --keypad-hover-bg: #6c34ac;
+  --keypad-bg-shadow: #6c34ac;
 }
 
 body {
