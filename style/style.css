@@ -4,7 +4,7 @@
   font-family: 'Spartan', sans-serif;
 }
 
-:root {
+.theme1 {
   --main-background: #3a4764;
   --text: #fff;
   --toggle-and-keypad-bg: #232c43;
