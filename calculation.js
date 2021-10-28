@@ -110,31 +110,54 @@ const calculator = new Calculator(
   currentOperandTextElement
 );
 
+const keyboardMap = {
+  Enter: equalsButton,
+  Delete: deleteButton,
+  Backspace: deleteButton,
+  Escape: allClearButton,
+  r: allClearButton,
+};
+
+window.addEventListener('keyup', ({ key }) => {
+  keyboardMap[key].click();
+});
+
 numberButtons.forEach((button) => {
+  keyboardMap[button.innerText] = button;
   button.addEventListener('click', () => {
     calculator.appendNumber(button.innerText);
     calculator.updateDisplay();
+    button.blur();
   });
 });
 
 operationButtons.forEach((button) => {
+  if (button.innerText === 'x') {
+    keyboardMap['*'] = button;
+  } else {
+    keyboardMap[button.innerText] = button;
+  }
   button.addEventListener('click', () => {
     calculator.chooseOperation(button.innerText);
     calculator.updateDisplay();
+    button.blur();
   });
 });
 
-equalsButton.addEventListener('click', (button) => {
+equalsButton.addEventListener('click', () => {
   calculator.compute();
   calculator.updateDisplay();
+  equalsButton.blur();
 });
 
-allClearButton.addEventListener('click', (button) => {
+allClearButton.addEventListener('click', () => {
   calculator.clear();
   calculator.updateDisplay();
+  allClearButton.blur();
 });
 
-deleteButton.addEventListener('click', (button) => {
+deleteButton.addEventListener('click', () => {
   calculator.delete();
   calculator.updateDisplay();
+  deleteButton.blur();
 });
