@@ -341,6 +341,7 @@ main .keyboard__equal {
 }
 
 main .keyboard__keypad {
+  padding: 0;
   border-radius: 10px;
   font-size: 32px;
   line-height: 36px;
@@ -387,5 +388,35 @@ main .keyboard__equal {
 main .keyboard__equal:hover {
   background: var(--keypad-and-toggle-hover-bg);
   color: var(--equal);
+}
+
+@media (max-width: 560px) {
+  main .display {
+    height: 88px;
+    padding: 26px 24px;
+  }
+  main .display__calculation {
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: -0.533333px;
+  }
+  main .keyboard {
+    -ms-grid-rows: (64px)[5];
+    -ms-grid-columns: (60px)[4];
+        grid-template: repeat(5, 64px)/repeat(4, 60px);
+    grid-gap: 13px;
+        grid-template-areas: '__7 __8 __9 __del' '__4 __5 __6 __plus' '__1 __2 __3 __minus' '__dot __0 __divide __time' '__reset __reset __equal __equal';
+    padding: 24px;
+  }
+  main .keyboard__keypad {
+    font-size: 28px;
+    line-height: 31px;
+    letter-spacing: -0.466667px;
+  }
+  main .keyboard__del, main .keyboard__reset, main .keyboard__equal {
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: -0.266667px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
