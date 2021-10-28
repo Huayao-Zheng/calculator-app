@@ -140,10 +140,15 @@ main header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   margin-bottom: 32px;
 }
 
 main header .title {
+  width: 67px;
+  height: 36px;
   font-size: 32px;
   font-weight: bold;
   letter-spacing: -0.533333px;
@@ -154,9 +159,9 @@ main header .theme {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 main header .theme__text {
@@ -167,6 +172,7 @@ main header .theme__text {
   text-transform: uppercase;
   color: var(--text);
   margin-right: 21px;
+  margin-bottom: 5px;
 }
 
 main header .theme__numbers {

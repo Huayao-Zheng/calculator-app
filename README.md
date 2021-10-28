@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- [Live]()
-- [Solution]()
+- [Live](https://lonelybuddy.github.io/calculator-app/)
+- [Solution](https://github.com/LonelyBuddy/calculator-app)
 
 ### Built with
 

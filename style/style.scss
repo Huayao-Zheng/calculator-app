@@ -105,9 +105,12 @@ main {
   header {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
     margin-bottom: 32px;
 
     .title {
+      width: 67px;
+      height: 36px;
       font-size: 32px;
       font-weight: bold;
       letter-spacing: -0.533333px;
@@ -116,7 +119,7 @@ main {
 
     .theme {
       display: flex;
-      align-items: center;
+      align-items: flex-end;
 
       &__text {
         font-size: 12px;
@@ -126,6 +129,7 @@ main {
         text-transform: uppercase;
         color: var(--text);
         margin-right: 21px;
+        margin-bottom: 5px;
       }
 
       &__numbers {
