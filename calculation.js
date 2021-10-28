@@ -13,10 +13,6 @@ class Calculator {
 
   delete() {
     this.currentOperand = this.currentOperand.toString().slice(0, -1);
-    console.log(
-      typeof this.currentOperand,
-      typeof this.currentOperand.toString().slice(0, -1)
-    );
   }
 
   appendNumber(number) {
@@ -113,17 +109,25 @@ const calculator = new Calculator(
 const keyboardMap = {
   Enter: equalsButton,
   Delete: deleteButton,
-  Backspace: deleteButton,
   Escape: allClearButton,
   r: allClearButton,
 };
 
+window.addEventListener('keydown', ({ key }) => {
+  if (key === 'Backspace' || key === 'Delete') {
+    keyboardMap['Delete'].click();
+  }
+});
+
 window.addEventListener('keyup', ({ key }) => {
-  keyboardMap[key].click();
+  if (keyboardMap[key]) {
+    keyboardMap[key].click();
+  }
 });
 
 numberButtons.forEach((button) => {
   keyboardMap[button.innerText] = button;
+
   button.addEventListener('click', () => {
     calculator.appendNumber(button.innerText);
     calculator.updateDisplay();
@@ -137,6 +141,7 @@ operationButtons.forEach((button) => {
   } else {
     keyboardMap[button.innerText] = button;
   }
+
   button.addEventListener('click', () => {
     calculator.chooseOperation(button.innerText);
     calculator.updateDisplay();
