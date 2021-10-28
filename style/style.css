@@ -364,7 +364,7 @@ main .keyboard__keypad {
   cursor: pointer;
 }
 
-main .keyboard__keypad:hover {
+main .keyboard__keypad:hover, main .keyboard__keypad:focus {
   background: var(--keypad-hover-bg);
 }
 
@@ -379,7 +379,7 @@ main .keyboard__del, main .keyboard__reset {
   text-transform: uppercase;
 }
 
-main .keyboard__del:hover, main .keyboard__reset:hover {
+main .keyboard__del:hover, main .keyboard__del:focus, main .keyboard__reset:hover, main .keyboard__reset:focus {
   background: var(--del-reset-keypad-hover-bg);
 }
 
@@ -393,7 +393,7 @@ main .keyboard__equal {
           box-shadow: inset 0px -4px 0px var(--equal-bg-shdow);
 }
 
-main .keyboard__equal:hover {
+main .keyboard__equal:hover, main .keyboard__equal:focus {
   background: var(--keypad-and-toggle-hover-bg);
   color: var(--equal);
 }

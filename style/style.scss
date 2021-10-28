@@ -256,7 +256,8 @@ main {
       border: none;
       transition: 0.3s;
       cursor: pointer;
-      &:hover {
+      &:hover,
+      &:focus {
         background: var(--keypad-hover-bg);
       }
     }
@@ -270,7 +271,8 @@ main {
       background: var(--del-reset-keypad-bg);
       box-shadow: inset 0px -4px 0px var(--del-reset-keypadbg-shadow);
       text-transform: uppercase;
-      &:hover {
+      &:hover,
+      &:focus {
         background: var(--del-reset-keypad-hover-bg);
       }
     }
@@ -282,7 +284,8 @@ main {
       color: var(--equal);
       background: var(--keypad-and-toggle-bg);
       box-shadow: inset 0px -4px 0px var(--equal-bg-shdow);
-      &:hover {
+      &:hover,
+      &:focus {
         background: var(--keypad-and-toggle-hover-bg);
         color: var(--equal);
       }

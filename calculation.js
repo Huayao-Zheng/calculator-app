@@ -131,7 +131,10 @@ numberButtons.forEach((button) => {
   button.addEventListener('click', () => {
     calculator.appendNumber(button.innerText);
     calculator.updateDisplay();
-    button.blur();
+    button.focus();
+    setTimeout(() => {
+      button.blur();
+    }, 150);
   });
 });
 
@@ -145,24 +148,36 @@ operationButtons.forEach((button) => {
   button.addEventListener('click', () => {
     calculator.chooseOperation(button.innerText);
     calculator.updateDisplay();
-    button.blur();
+    button.focus();
+    setTimeout(() => {
+      button.blur();
+    }, 150);
   });
 });
 
 equalsButton.addEventListener('click', () => {
   calculator.compute();
   calculator.updateDisplay();
-  equalsButton.blur();
+  equalsButton.focus();
+  setTimeout(() => {
+    equalsButton.blur();
+  }, 150);
 });
 
 allClearButton.addEventListener('click', () => {
   calculator.clear();
   calculator.updateDisplay();
-  allClearButton.blur();
+  allClearButton.focus();
+  setTimeout(() => {
+    allClearButton.blur();
+  }, 150);
 });
 
 deleteButton.addEventListener('click', () => {
   calculator.delete();
   calculator.updateDisplay();
-  deleteButton.blur();
+  deleteButton.focus();
+  setTimeout(() => {
+    deleteButton.blur();
+  }, 150);
 });
