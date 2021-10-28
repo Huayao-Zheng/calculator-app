@@ -3,9 +3,6 @@ const themeDot = document.querySelector('.dot');
 
 const storage = window.localStorage;
 
-/**
- * -------Theme
- */
 let direction = 'right';
 
 (function getThemeFromLocalStorage() {
@@ -41,7 +38,3 @@ function themeHandler() {
 }
 
 themeDot.addEventListener('click', themeHandler);
-
-/**
- * -------Calculation
- */

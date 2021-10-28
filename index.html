@@ -44,39 +44,43 @@
       </header>
 
       <section class="display">
-        <div class="display__calculation">123321</div>
+        <div class="display__calculation">
+          <span data-previous-operand class="previous-operand"></span>
+          <span data-current-operand class="current-operand"></span>
+        </div>
       </section>
 
       <section class="keyboard">
-        <button class="keyboard__keypad keyboard__0">0</button>
-        <button class="keyboard__keypad keyboard__1">1</button>
-        <button class="keyboard__keypad keyboard__2">2</button>
-        <button class="keyboard__keypad keyboard__3">3</button>
-        <button class="keyboard__keypad keyboard__4">4</button>
-        <button class="keyboard__keypad keyboard__5">5</button>
-        <button class="keyboard__keypad keyboard__6">6</button>
-        <button class="keyboard__keypad keyboard__7">7</button>
-        <button class="keyboard__keypad keyboard__8">8</button>
-        <button class="keyboard__keypad keyboard__9">9</button>
-        <button class="keyboard__keypad keyboard__plus">+</button>
-        <button class="keyboard__keypad keyboard__minus">-</button>
-        <button class="keyboard__keypad keyboard__time">x</button>
-        <button class="keyboard__keypad keyboard__divide">/</button>
-        <button class="keyboard__keypad keyboard__dot">.</button>
-        <button class="keyboard__keypad keyboard__del">del</button>
-        <button class="keyboard__keypad keyboard__reset">reset</button>
-        <button class="keyboard__keypad keyboard__equal">=</button>
+        <button data-number class="keyboard__keypad keyboard__0">0</button>
+        <button data-number class="keyboard__keypad keyboard__1">1</button>
+        <button data-number class="keyboard__keypad keyboard__2">2</button>
+        <button data-number class="keyboard__keypad keyboard__3">3</button>
+        <button data-number class="keyboard__keypad keyboard__4">4</button>
+        <button data-number class="keyboard__keypad keyboard__5">5</button>
+        <button data-number class="keyboard__keypad keyboard__6">6</button>
+        <button data-number class="keyboard__keypad keyboard__7">7</button>
+        <button data-number class="keyboard__keypad keyboard__8">8</button>
+        <button data-number class="keyboard__keypad keyboard__9">9</button>
+        <button data-number class="keyboard__keypad keyboard__dot">.</button>
+        <button data-operation class="keyboard__keypad keyboard__plus">+</button>
+        <button data-operation class="keyboard__keypad keyboard__minus">-</button>
+        <button data-operation class="keyboard__keypad keyboard__time">x</button>
+        <button data-operation class="keyboard__keypad keyboard__divide">/</button>
+        <button data-delete class="keyboard__keypad keyboard__del">del</button>
+        <button data-all-clear class="keyboard__keypad keyboard__reset">reset</button>
+        <button data-equals class="keyboard__keypad keyboard__equal">=</button>
       </section>
 
   </main>
 
-    <!-- <div class="attribution">
+    <footer>
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div> -->
+      >. Coded by <a target="_blank" href="https://www.frontendmentor.io/profile/LonelyBuddy">Henry Zheng</a>.
+    </footer>
 
-    <script src="/script.js"></script>
+    <script src="/script/theme.js"></script>
+    <script src="/script/calculation.js"></script>
   </body>
 </html>
